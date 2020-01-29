@@ -78,3 +78,16 @@ RSpec.configure do |config|
   end
 =end
 end
+
+reverse_each_word("Hello there, and how are you?")
+  #=> "olleH ,ereht dna woh era ?uoy"
+  
+  let(:sentence2) { "Hi again, just making sure it's reversed!" }
+  
+  it 'uses collect' do
+    expect_any_instance_of(Array).to receive(:collect).and_call_original
+    reverse_each_word("Verifying that collect is being called.")
+  end
+  
+  
+  
